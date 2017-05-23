@@ -21,6 +21,8 @@
 	<span class="cf-subdir">ext</span>      <i>extensions...</i>
 	<span class="cf-subdir">[css|js]</span> <i>file</i>
 	<span class="cf-subdir">template</span> [<i>name</i>] <i>path</i>
+	<span class="cf-subdir">templatedir</span> <i>defaultpath</i>
+	<span class="cf-subdir">no_cache_template</span>
 }</code></p>
 
 				<ul>
@@ -35,6 +37,10 @@
 					<li><strong>template</strong> defines a template with the given <strong>name</strong> to be at the given
 						<strong>path</strong>. To specify the default template, omit <em>name</em>. Markdown files can choose
 						a template by using the name in its front matter.</li>
+					<li><strong>templatedir</strong> sets the default path with the given <strong>defaultpath</strong> to be used 
+						when listing templates.</li>
+					<li><strong>no_cache_template</strong> turns off template caching, which is enabled by default. This is useful
+						during development to not require a reload of Caddy to test changes to the templates.</li>
 				</ul>
 
 				<p>You can use the js and css arguments more than once to add more files to the default template. If you want
